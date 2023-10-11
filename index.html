@@ -20,6 +20,7 @@
     </script>
 
     <!-- import the webpage's javascript files -->
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
     <script src="https://rawgit.com/aframevr/aframe/master/dist/aframe-master.min.js"></script>
     <script src="https://unpkg.com/aframe-extras@3.3.0/dist/aframe-extras.min.js"></script>
     <script
@@ -139,7 +140,7 @@
 
     <a-scene webxr="requiredFeatures: hit-test,local-floor;">
         <a-assets>
-            <a-asset-item id="tower" src="./assets/water_tower.glb" response-type="arraybuffer"></a-asset-item>
+            <a-asset-item id="tower" src="./assets/tower.glb" response-type="arraybuffer"></a-asset-item>
 
             <a-asset-item id="reticle" src="./assets/reticle.glb" response-type="arraybuffer"></a-asset-item>
         </a-assets>
@@ -151,8 +152,7 @@
             hide-in-ar-mode></a-entity>
 
         <a-entity id="tower" position="-1 0 -3" scale="0.5 0.5 0.5">
-            <a-entity position="0 2.15 0" rotation="0 55 0" gltf-model="#tower" animation-mixer
-                shadow="cast: true; receive: false"></a-entity>
+            <a-entity position="0 2.15 0" rotation="0 55 0" gltf-model="#tower"></a-entity>
 
             <!-- This shadow-receiving plane is only visible in AR mode.-->
             <a-plane height="30" width="30" rotation="-90 0 0" shadow="receive: true" ar-shadows="opacity: 0.2"
